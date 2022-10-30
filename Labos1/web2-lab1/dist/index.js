@@ -46,11 +46,13 @@ var Utakmica_1 = require("./Utakmica");
 var Tim_1 = require("./Tim");
 dotenv_1["default"].config({ path: require('find-config')('.env') });
 var pool = new pg_1.Pool({
+    connectionString: "postgres://sretnoime:I3xF431RYa7G5lO1ni6n53U6DdS4qChg@dpg-cdfeiu5a4992md4fuojg-a.frankfurt-postgres.render.com/web2_baza",
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
-    database: 'web2-lab1',
+    database: 'web2-baza',
     password: process.env.DB_PASSWORD,
-    port: 5432
+    port: 5432,
+    ssl: true
 });
 function getTeams() {
     return __awaiter(this, void 0, void 0, function () {
