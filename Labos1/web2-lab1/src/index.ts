@@ -6,7 +6,7 @@ dotenv.config({path: require('find-config')('.env')})
 const pool = new Pool({
    user: process.env.DB_USER,
    host: process.env.DB_HOST,
-   database: 'web2-lab1',
+   database: 'web2-baza',
    password: process.env.DB_PASSWORD,
    port: 5432,
 })
